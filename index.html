@@ -1,1 +1,24 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Blank Window</title>
+    <script>
+        function openBlankWindow() {
+            let win = window.open("", "_blank", "width=800,height=600");
+            win.onbeforeunload = function() {
+                console.log("before unload");
+            }
+
+            win.onunload = function() {
+                console.log("unload");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Open a Blank Window</h1>
+    <button onclick="openBlankWindow()">Open Blank Window</button>
+</body>
+</html>
