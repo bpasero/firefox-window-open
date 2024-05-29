@@ -6,7 +6,8 @@
     <title>Open Blank Window</title>
     <script>
         function openBlankWindow() {
-            let win = window.open("", "_blank", "width=800,height=600");
+            //let win = window.open("", "_blank", "width=800,height=600");
+            let win = window.open("about:blank", undefined, "width=800,height=600");
             win.onbeforeunload = function() {
                 console.log("before unload");
             }
